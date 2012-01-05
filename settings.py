@@ -13,10 +13,11 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# Les informations USER et PASSWORD ont volontairement ete enlevees pour le depot
 DATABASE_ENGINE = 'mysql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'djangoBulletin'             # Or path to database file if using sqlite3.
-DATABASE_USER = 'dBul'             # Not used with sqlite3.
-DATABASE_PASSWORD = 'dBul'         # Not used with sqlite3.
+DATABASE_USER = ''             # Not used with sqlite3.
+DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = 'localhost'             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = '3306'             # Set to empty string for default. Not used with sqlite3.
 
