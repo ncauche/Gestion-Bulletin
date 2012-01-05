@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\">
+ <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
+  <link rel="stylesheet" href="/media/css/css_global.css" type="text/css" media="screen" />
+ </head>
+ <body>
+  <div class="principale">
+   <h1>Saisie des notes pour {{ etudiant.nom }} {{ etudiant.prenom }}</h1>
+
+   <form action="/gestionScolaire/{{ etudiant.id }}/validation/" method="post">
+    <table class="tableau">
+{% for matiere in listeMatiere %}
+     <tr><td>{{ matiere.intituleMatiere }}</td>
+      <td><input type="text" name="note{{ matiere.id }}" value="" size="4" /></td>
+      <td><input type="text" name="commentaire{{ matiere.id }}" value="" /><br /></td>
+     </tr>
+{% endfor %}
+     <tr><td colspan="3" align="center">
+      <input type="submit" value="Validation" /> <input type="button" value="Annuler" onClick="javascript:document.location.replace('/gestionScolaire/{{ etudiant.id }}/')" />
+     </td></tr>
+    </table>
+   </form>
+  </div>
+ </body>
+</html>

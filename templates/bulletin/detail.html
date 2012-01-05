@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\">
+ <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
+  <link rel="stylesheet" href="/media/css/css_global.css" type="text/css" media="screen" />
+ </head>
+ <body>
+  <div class="principale">
+   <h1>Notes de {{etudiant.nom}} {{etudiant.prenom}}</h1>
+
+   <div class="blocCentre">
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+{% if listeNote %}
+    <table class="tableau">
+{% for note in listeNote %}
+     <tr>
+      <td>- {{ note.matiere.intituleMatiere }} : </td><td>{{ note.note }}</td><td>{{ note.commentaire }}</td>
+     </tr>
+{% endfor %}
+
+     <tr><td class="resultat">Moyenne :</td><td class="resultat">{{ moyenne }}</td></tr>
+     <tr><td colspan="3"><a href="/gestionScolaire/{{ etudiant.id }}/commentaire">Commentaire</a></td></tr>
+     <tr><td colspan="3">{{ commentaire }}</td></tr>
+    </table>
+
+{% else %}
+    Aucune note de saisie<br />
+{% endif %}
+
+    <br /><a href="/gestionScolaire/{{ etudiant.id }}/saisie">Saisie note</a> - <a href="/gestionScolaire/">Retour</a>
+   </div>
+  </div>
+ </body>
+</html>

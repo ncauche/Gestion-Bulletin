@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\">
+ <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
+  <link rel="stylesheet" href="/media/css/css_global.css" type="text/css" media="screen" />
+ </head>
+ <body>
+  <div class="principale">
+{% if error_message %}
+    <p class="erreur">{{ error_message }}</p>
+{% endif %}
+
+{% if liste_etudiant %}
+    <ul>
+    {% for etudiant in liste_etudiant %}
+        <li>
+           {{ etudiant.nom }} {{ etudiant.prenom}}
+           - <a href="/gestionScolaire/{{ etudiant.id }}">Detail Note</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucun &eacute;tudiant dans la liste.</p>
+{% endif %}
+  <a href="/gestionScolaire/etudiant">Ajout Etudiant</a>
+  <br /><a href="/gestionScolaire/matiereListe">Liste Mati&egrave;re</a>
+ </body>
+</html>
+

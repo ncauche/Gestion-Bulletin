@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\">
+ <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
+  <link rel="stylesheet" href="/media/css/css_global.css" type="text/css" media="screen" />
+ </head>
+ <body>
+  <div class="principale">
+   <h1>Saisie d'un nouvel &eacute;tudiant</h1>
+
+   <form action="/gestionScolaire/etudiantValidation/" method="post">
+    <table class="tableau">
+     <tr><td>Nom :</td><td><input type="text" name="nom" value="" /></td></tr>
+     <tr><td>Pr&eacute;nom :</td><td><input type="text" name="prenom" value="" /></td></tr>
+     <tr><td colspan="2" align="center">
+      <input type="submit" value="Validation" /> <input type="button" value="Annuler" onClick="javascript:document.location.replace('/gestionScolaire/')" />
+     </td></tr>
+    </table>
+   </form>
+  </div>
+ </body>
+</html>

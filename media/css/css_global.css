@@ -1,0 +1,30 @@
+body { background-color : #C3C4DF;
+}
+
+.principale { background-color: #FFFFFF; border: 2px solid #6A6A6A;
+              font-family: "Trebuchet MS", Arial; font-size: 14px;
+              width: 90%; border-collapse: collapse; border-spacing: 0px;
+	      padding: 10px;
+	      margin-left: auto; margin-right: auto;
+}
+.blocCentre { width: 100%; text-align: center; }
+
+.erreur { color: #E33434; font-weight: bold; }
+
+.tableau { border:1px solid #6A6A6A;
+	   margin-left: auto; margin-right: auto;
+	   width: 500px;
+}
+
+.resultat { font-weight: bold;
+}
+
+a:link { font-size: 12px; font-family: "Trebuchet MS", Arial;
+         color: #FF42E2; text-decoration:none
+}
+a:visited { font-size: 12px; font-family: "Trebuchet MS", Arial;
+            color: #FF42E2; text-decoration:none
+}
+a:hover { font-size: 12px; font-family: "Trebuchet MS", Arial;
+          color: #FF42E2; text-decoration: underline
+}

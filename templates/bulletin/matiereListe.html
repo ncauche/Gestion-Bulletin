@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\">
+ <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
+  <link rel="stylesheet" href="/media/css/css_global.css" type="text/css" media="screen" />
+ </head>
+ <body>
+  <div class="principale">
+{% if error_message %}
+    <p class="erreur">{{ error_message }}</p>
+{% endif %}
+
+{% if liste_matiere %}
+    <ul>
+    {% for matiere in liste_matiere %}
+        <li>{{ matiere.intituleMatiere }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune mati&egrave;re dans la base.</p>
+{% endif %}
+  <a href="/gestionScolaire/matiere">Ajout Mati&egrave;re</a>
+  <br /><a href="/gestionScolaire/">Retour</a>
+ </body>
+</html>
+
