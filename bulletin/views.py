@@ -98,7 +98,7 @@ def validCommentaire(request, etudiant_id):
     e = get_object_or_404(Etudiant, pk=etudiant_id)
     try:
         c = Commentaire.objects.get(etudiant=e)
-    except (KeyError, Note.DoesNotExist):
+    except (KeyError, Commentaire.DoesNotExist):
         c = Commentaire(etudiant=e, commentaire=request.POST['commentaire'])
         c.save()
     else:
