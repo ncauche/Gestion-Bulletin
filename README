@@ -1,0 +1,8 @@
+Petit essai de programmation en Python avec le framework Django
+Le but est de gérer un petit bulletin scolaire.
+
+Pour mes test, j'ai utilisé une base MySQL et un serveur local.
+Quelques informations sont à vérifier et/ou modifier dans le
+fichier settings.py :
+ - ce qui concerne la base de données (DATABASE...)
+ - le chemin MEDIA_URL puisqu'il correspond à un serveur local
